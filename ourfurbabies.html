@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Fur Babies - Supremo Furbabies</title>
+  <link rel="stylesheet" href="ourfurbabies-style.css">
+  <link rel="stylesheet" href="donatepopup-style.css">
+  <link rel="stylesheet" href="privacypopup.css">
+  <link rel="stylesheet" href="terms-style.css">
+</head>
+<body class="adoption-page">
+
+  <header class="page-header">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="home.html">
+          <img src="mainlogo/logo.png" alt="Paw Logo"> 
+        </a>
+      </div>
+
+      <!-- HAMBURGER MENU BUTTON -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li class="dropdown">
+          <a href="aboutus.html" class="dropbtn">About Us ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="ourfurbabies.html" class="active">Our Furbabies ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="ourfurbabies.html#filters" class="active">Adopt & Rescues</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="getinvolved.html" class="dropbtn">Get Involved</a>
+        </li>
+        <li><a href="latest.html">Latest</a></li>
+      </ul>
+      <a href="#" class="btn-donate-nav">Donate</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="adoption-hero">
+      <div class="adoption-container">
+        <div class="adoption-left">
+          <h1>Adopt a shelter Cat or Dog</h1>
+          <p>
+            Our shelter is home to a variety of loving pets, each waiting for the chance to join a caring family. From playful puppies and curious kittens to gentle adult companions, every animal has a unique personality and story to share.
+          </p>
+          <a href="adoptionform.html" class="btn">Apply Now</a>
+        </div>
+
+        <div class="adoption-right">
+          <div class="adoption-card">
+            <h2>Here’s how to apply:</h2>
+            <ul>
+              <li>Submit the adoption application form</li>
+              <li>Attend the Zoom interview</li>
+              <li>Meet our shelter animals in person</li>
+              <li>Visit your chosen pet to confirm your choice</li>
+              <li>Wait for vet clearance and schedule pick up</li>
+              <li>Pay adoption fee of ₱500 (cat) / ₱1000 (dog)</li>
+              <li>Take your pet home!</li>
+            </ul>
+            <a href="faqs.html" class="btn btn-secondary">Adoption FAQ</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="filters" class="filters">
+        <a href="#" class="btn btn-pill active">ALL</a>
+        <a href="#" class="btn btn-pill">DOGS</a>
+        <a href="#" class="btn btn-pill">CATS</a>
+      </div>
+    </section>
+
+    <section class="pet-gallery">
+      <div class="pet-grid">
+        <article class="pet-card">
+          <div class="pet-image"><img src="Pictures/mochi.jpg" alt="Mochi"></div>
+          <div class="pet-label">
+            <h3>Mochi</h3>
+            <span>A week old</span>
+          </div>
+          <a href="adoptform.html" class="btn btn-outline">Adopt</a>
+        </article>
+        <article class="pet-card">
+          <div class="pet-image"><img src="Pictures/kimchi.jpg" alt="Kimchi"></div>
+          <div class="pet-label">
+            <h3>Kimchi</h3>
+            <span>5 weeks old | Male</span>
+          </div>
+          <a href="adoptform.html" class="btn btn-outline">Adopt</a>
+        </article>
+        <article class="pet-card">
+          <div class="pet-image"><img src="Pictures/musubi.jpg" alt="Musubi"></div>
+          <div class="pet-label">
+            <h3>Musubi</h3>
+            <span>7 weeks old | Female</span>
+          </div>
+          <a href="adoptform.html" class="btn btn-outline">Adopt</a>
+        </article>
+        <article class="pet-card">
+          <div class="pet-image"><img src="Pictures/oranji.jpeg" alt="Oranji"></div>
+          <div class="pet-label">
+            <h3>Oranji</h3>
+            <span>2 years old | Female</span>
+          </div>
+          <a href="adoptform.html" class="btn btn-outline">Adopt</a>
+        </article>
+        <article class="pet-card">
+          <div class="pet-image"><img src="Pictures/tiger.jpg" alt="Tiger"></div>
+          <div class="pet-label">
+            <h3>Tiger</h3>
+            <span>6 weeks old | Male</span>
+          </div>
+          <a href="adoptform.html" class="btn btn-outline">Adopt</a>
+        </article>
+        <article class="pet-card">
+          <div class="pet-image"><img src="Pictures/sami.jpeg" alt="Sami"></div>
+          <div class="pet-label">
+            <h3>Sami</h3>
+            <span>2 years old | Female</span>
+          </div>
+          <a href="adoptform.html" class="btn btn-outline">Adopt</a>
+        </article>
+        <article class="pet-card">
+          <div class="pet-image"><img src="Pictures/brownie.png" alt="Brownie"></div>
+          <div class="pet-label">
+            <h3>Brownie</h3>
+            <span>4 months old | Male</span>
+          </div>
+          <a href="adoptform.html" class="btn btn-outline">Adopt</a>
+        </article>
+        <article class="pet-card">
+          <div class="pet-image"><img src="Pictures/echo.jpg" alt="Echo"></div>
+          <div class="pet-label">
+            <h3>Echo</h3>
+            <span>3 months old | Male</span>
+          </div>
+          <a href="adoptform.html" class="btn btn-outline">Adopt</a>
+        </article>
+      </div>
+
+      <div class="rescue-highlight">
+        <div class="rescue-panel">
+          <div class="rescue-images">
+            <div class="rescue-card">
+              <img src="Pictures/before.png" alt="Before rescue">
+              <p class="rescue-label">BEFORE</p>
+            </div>
+            <div class="rescue-card">
+              <img src="Pictures/after.jpg" alt="After rescue">
+              <p class="rescue-label">AFTER</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn-pill see-more" style="color: black;">See more ▾</a>
+        </div>
+        <div class="rescue-copy">
+          <p class="eyebrow">MEET OUR RESCUES!</p>
+          <h2>Arcel</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="donate.html" class="btn">HELP</a>
+        </div>
+      </div>
+
+      <div class="donate-panel">
+        <div class="donation-card">
+          <button class="donate-close" aria-label="Close">×</button>
+          <p class="donate-title">Be our superhero!</p>
+          <p>Make a donation and find out more about our projects, partners, and what your donation can do.</p>
+          <a href="donate.html" class="btn btn-outline">DONATE</a>
+          <a href="#" class="btn btn-outline btn-secondary">SORRY, I'LL PASS</a>
+        </div>
+        <div class="donate-hero">
+          <h2>Not ready to adopt yet?</h2>
+          <p>don't worry we'll appreciate you helping us!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2 class="footer-logo">Supremo <br> Furbabies</h2>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=100063836844165"><img src="footer/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/gjprias/reels/"><img src="footer/instagram.png" alt="Instagram"></a>
+          <a href="https://www.tiktok.com/@supremo.babies8?is_from_webapp=1&sender_device=pc"><img src="footer/tiktok.png" alt="TikTok"></a>
+        </div>
+      </div>
+
+      <div class="footer-mailing">
+        <h3>Mailing List</h3>
+        <p>Join the family and be part of a compassionate effort to give every animal a second chance!</p>
+        <div class="email-input-wrapper">
+          <input type="email" placeholder="Email Address" class="footer-input">
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="contactus.html#privacy-section">PRIVACY POLICY</a></li>
+          <li><a href="#" class="open-terms">TERMS & CONDITIONS</a></li>
+          <li><a href="#">SITE MAP</a></li>
+          <li><a href="contactus.html">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DONATE POPUP -->
+  <div class="popup-wrapper" id="donateModal">
+      <div class="donation-popup">
+          <div class="popup-left">
+              <img src="pop-up/dog-popup.png" alt="Donate Now" class="hero-img">
+              <img src="mainlogo/logo.png" class="mini-logo" alt="Logo"> 
+              <h2>Make a Difference today!</h2>
+              <p>When you donate with Supremo Furbabies, 100% of your donation will go to the shelter and help us provide care for our rescued animals.</p>
+          </div>
+
+          <div class="popup-right">
+              <div class="form-header">
+                  <img src="pop-up/secure-icon.png" alt="Secure Icon" class="secure-icon">
+                  <h3>Secure donation</h3>
+              </div>
+
+              <div class="toggle-group">
+                  <button type="button" class="type-btn active"><b>Give once</b></button>
+                  <button type="button" class="type-btn"><b>Monthly</b></button>
+              </div>
+
+              <div class="amount-grid">
+                  <button type="button" class="amount-btn" data-amount="60000">₱ 60k</button>
+                  <button type="button" class="amount-btn" data-amount="30000">₱ 30k</button>
+                  <button type="button" class="amount-btn" data-amount="10000">₱ 10k</button>
+                  <button type="button" class="amount-btn" data-amount="3000">₱ 3,000</button>
+                  <button type="button" class="amount-btn" data-amount="1500">₱ 1,500</button>
+                  <button type="button" class="amount-btn" data-amount="500">₱ 500</button>
+              </div>
+
+              <div class="input-container">
+                  <input type="text" id="donation-input" placeholder="PHP" class="custom-amount">
+              </div>
+              <button class="donate-btn">Donate</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- TERMS & CONDITIONS MODAL -->
+  <div class="popup-wrapper" id="termsModal">
+      <div class="terms-popup">
+          <div class="terms-header">
+              <h2>Terms and Conditions</h2>
+              <p class="terms-subtitle">Supremo Furbabies Website</p>
+              <button class="terms-close-btn" id="termsCloseBtn">✕</button>
+          </div>
+
+          <div class="terms-body">
+              <p class="terms-intro">Welcome to the Supremo Furbabies website. By accessing or using this website, users agree to follow and be bound by the following Terms and Conditions. Please read them carefully before using the website.</p>
+
+              <div class="terms-section">
+                  <h3>1. Acceptance of Terms</h3>
+                  <p>By using the Supremo Furbabies website, users acknowledge that they have read, understood, and agreed to these Terms and Conditions. If users do not agree with any part of these terms, they should discontinue use of the website immediately.</p>
+              </div>
+
+              <div class="terms-agree-box">
+                  <p>By using this website, users confirm that they agree to comply with these Terms and Conditions.</p>
+                  <button class="btn-terms-agree" id="termsAgreeBtn">I Understand</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- ALL COMBINED SCRIPTS -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Hamburger Toggle Script
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      if (menuToggle) {
+          menuToggle.addEventListener('click', () => {
+              navLinks.classList.toggle('active');
+          });
+      }
+
+      // 2. Navbar Scroll Effect
+      window.addEventListener("scroll", function(){
+        const nav = document.querySelector(".navbar");
+        if(window.scrollY > 50){
+          nav.style.background = "rgba(0,0,0,0.85)";
+          nav.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+        } else{
+          nav.style.background = "rgba(0,0,0,0.65)";
+          nav.style.boxShadow = "none";
+        }
+      });
+
+      // 3. Donate Modal Logic
+      const modal = document.getElementById("donateModal");
+      const amountBtns = document.querySelectorAll(".amount-btn");
+      const donationInput = document.getElementById("donation-input");
+
+      document.querySelectorAll(".open-donate, .btn-donate-nav, .btn-donate-main").forEach(btn => {
+          btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              modal.classList.add("active");
+          });
+      });
+
+      modal.addEventListener("click", (e) => {
+          if (e.target === modal) modal.classList.remove("active");
+      });
+
+      amountBtns.forEach(btn => {
+          btn.addEventListener("click", () => {
+              amountBtns.forEach(b => b.classList.remove("active"));
+              btn.classList.add("active");
+              donationInput.value = "₱ " + Number(btn.getAttribute("data-amount")).toLocaleString();
+          });
+      });
+
+      donationInput.addEventListener("focus", () => {
+          amountBtns.forEach(b => b.classList.remove("active"));
+          donationInput.value = "";
+      });
+
+      document.querySelectorAll(".type-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+              document.querySelectorAll(".type-btn").forEach(b => b.classList.remove("active"));
+              btn.classList.add("active");
+          });
+      });
+
+      // 4. Terms Modal Logic
+      const termsModal = document.getElementById("termsModal");
+
+      document.querySelectorAll(".open-terms").forEach(link => {
+          link.addEventListener("click", (e) => {
+              e.preventDefault();
+              termsModal.classList.add("active");
+          });
+      });
+
+      document.getElementById("termsCloseBtn").addEventListener("click", () => {
+          termsModal.classList.remove("active");
+      });
+
+      document.getElementById("termsAgreeBtn").addEventListener("click", () => {
+          termsModal.classList.remove("active");
+      });
+
+      termsModal.addEventListener("click", (e) => {
+          if (e.target === termsModal) termsModal.classList.remove("active");
+      });
+  });
+  </script>
+
+</body>
+</html>

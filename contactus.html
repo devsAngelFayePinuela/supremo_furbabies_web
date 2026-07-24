@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Supremo Furbabies</title>
+  <link rel="stylesheet" href="contactus-style.css">
+  <link rel="stylesheet" href="donatepopup-style.css">
+</head>
+<body class="adoption-page">
+
+  <!-- PAGE HEADER & NAVIGATION -->
+  <header class="page-header">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="home.html">
+          <img src="mainlogo/logo.png" alt="Paw Logo">
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Toggle (Mobile) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        
+        <li class="dropdown">
+          <a href="aboutus.html" class="dropbtn">About Us ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="contactus.html" class="active">Contact Us</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="ourfurbabies.html" class="dropbtn">Our Furbabies ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="ourfurbabies.html">Adopt & Rescues</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </li>
+
+        <li><a href="getinvolved.html">Get Involved</a></li>
+        <li><a href="latest.html">Latest</a></li>
+      </ul>
+      
+      <a href="#" class="btn-donate-nav">Donate</a>
+    </nav>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="contact-container">
+      
+      <!-- Left side: Contact Details -->
+      <div class="contact-details">
+        <div class="contact-item">
+          <img src="icons/telephone.png" alt="Phone Icon">
+          <a href="tel:0000000000">0000000000</a>
+        </div>
+        <div class="contact-item">
+          <img src="icons/mail.png" alt="Email Icon">
+          <a href="mailto:supremofurbabies@gmail.com">supremofurbabies@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <img src="icons/location.png" alt="Location Icon">
+          <p>11 Pacencia St., Tugatog, Malabon City<br>
+             1195 M. Naval St. Brgy. Daanghari, Navotas City</p>
+        </div>
+      </div>
+
+      <!-- Right side: Contact Form -->
+      <div class="contact-form">
+        <form action="#" method="post">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" placeholder="First" required>
+
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="+63 000 000 0000" required>
+
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" placeholder="Input Message" required></textarea>
+
+          <button type="submit" class="btn-send">Send</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRIVACY MODAL OVERLAY -->
+  <div id="privacy-modal-overlay" class="privacy-modal-overlay">
+    <section id="privacy-section" class="privacy-section">
+      <div class="privacy-container">
+        
+        <button id="privacy-close-btn" class="privacy-close-btn" aria-label="Leave website">&times;</button>
+        
+        <h2>PRIVACY POLICIES</h2>
+        <p>
+          We collect personal information such as your name, contact details, and housing information 
+          to evaluate adoption applications and ensure animal welfare. Your information is kept 
+          confidential and will not be sold, rented, or shared with third parties for marketing purposes.
+        </p>
+        <br>
+        <p>
+          Details may be shared with licensed veterinarians or microchip registries when necessary 
+          for animal care or registration. By submitting an application, you consent to the use of 
+          your data for the adoption process, which may include background or reference checks.
+        </p>
+        <br>
+        <p>
+          We maintain industry-standard security measures to protect your data from unauthorized 
+          access or disclosure.
+        </p>
+        
+        <button id="privacy-accept-btn" class="privacy-accept-btn">I Understand</button>
+        
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2 class="footer-logo">Supremo <br> Furbabies</h2>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=100063836844165"><img src="footer/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/gjprias/reels/"><img src="footer/instagram.png" alt="Instagram"></a>
+          <a href="https://www.tiktok.com/@supremo.babies8?is_from_webapp=1&sender_device=pc"><img src="footer/tiktok.png" alt="TikTok"></a>
+        </div>
+      </div>
+
+      <div class="footer-mailing">
+        <h3>Mailing List</h3>
+        <p>Join the family and be part of a compassionate effort to give every animal a second chance!</p>
+        <div class="email-input-wrapper">
+          <input type="email" placeholder="Email Address" class="footer-input">
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="#" class="open-privacy">PRIVACY POLICY</a></li>
+          <li><a href="#" class="terms-open">TERMS & CONDITIONS</a></li>
+          <li><a href="#">SITE MAP</a></li>
+          <li><a href="contactus.html">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DONATE POPUP -->
+  <div class="popup-wrapper" id="donateModal">
+    <div class="donation-popup">
+      <div class="popup-left">
+        <img src="pop-up/dog-popup.png" alt="Donate Now" class="hero-img">
+        <img src="mainlogo/logo.png" class="mini-logo" alt="Logo"> 
+        <h2>Make a Difference today!</h2>
+        <p>When you donate with Supremo Furbabies, 100% of your donation will go to the shelter and help us provide care for our rescued animals.</p>
+      </div>
+
+      <div class="popup-right">
+        <div class="form-header">
+          <img src="pop-up/secure-icon.png" alt="Secure Icon" class="secure-icon">
+          <h3>Secure donation</h3>
+        </div>
+
+        <div class="toggle-group">
+          <button type="button" class="type-btn active"><b>Give once</b></button>
+          <button type="button" class="type-btn"><b>Monthly</b></button>
+        </div>
+
+        <div class="amount-grid">
+          <button type="button" class="amount-btn" data-amount="60000">₱ 60k</button>
+          <button type="button" class="amount-btn" data-amount="30000">₱ 30k</button>
+          <button type="button" class="amount-btn" data-amount="10000">₱ 10k</button>
+          <button type="button" class="amount-btn" data-amount="3000">₱ 3,000</button>
+          <button type="button" class="amount-btn" data-amount="1500">₱ 1,500</button>
+          <button type="button" class="amount-btn" data-amount="500">₱ 500</button>
+        </div>
+
+        <div class="input-container">
+          <input type="text" id="donation-input" placeholder="PHP" class="custom-amount">
+        </div>
+        <button class="donate-btn">Donate</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALL SCRIPTS -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+
+    // 2. Navbar Scroll Effect
+    window.addEventListener("scroll", function() {
+      const nav = document.querySelector(".navbar");
+      if (window.scrollY > 50) {
+        nav.style.background = "rgba(0,0,0,0.85)";
+        nav.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+      } else {
+        nav.style.background = "black";
+        nav.style.boxShadow = "none";
+      }
+    });
+
+    // 3. Privacy Policy Modal Script
+    document.addEventListener("DOMContentLoaded", function() {
+      const modalOverlay = document.getElementById("privacy-modal-overlay");
+      const acceptBtn = document.getElementById("privacy-accept-btn");
+      const closeBtn = document.getElementById("privacy-close-btn");
+      const openPrivacyBtns = document.querySelectorAll(".open-privacy");
+
+      if (!localStorage.getItem("privacyAccepted")) {
+        modalOverlay.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      openPrivacyBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          modalOverlay.style.display = "flex";
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      acceptBtn.addEventListener("click", function() {
+        localStorage.setItem("privacyAccepted", "true");
+        modalOverlay.style.display = "none";
+        document.body.style.overflow = "auto";
+      });
+
+      closeBtn.addEventListener("click", function() {
+        window.location.href = "https://www.google.com";
+      });
+
+      // 4. Donate Modal Logic
+      const donateModal = document.getElementById("donateModal");
+      const amountBtns = document.querySelectorAll(".amount-btn");
+      const donationInput = document.getElementById("donation-input");
+
+      document.querySelectorAll(".open-donate, .btn-donate-nav, .btn-donate-main").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          donateModal.classList.add("active");
+        });
+      });
+
+      donateModal.addEventListener("click", (e) => {
+        if (e.target === donateModal) donateModal.classList.remove("active");
+      });
+
+      amountBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          amountBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          donationInput.value = "₱ " + Number(btn.getAttribute("data-amount")).toLocaleString();
+        });
+      });
+
+      donationInput.addEventListener("focus", () => {
+        amountBtns.forEach(b => b.classList.remove("active"));
+        donationInput.value = "";
+      });
+
+      document.querySelectorAll(".type-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".type-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+.popup-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;              /* ← must be here */
+    visibility: hidden;      /* ← must be here */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-wrapper.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.donation-popup {
+    display: flex;
+    /* This makes it bigger but leaves a 5% gap on each side */
+    width: 90%; 
+    max-width: 1100px; /* Increased from 950px to make it larger on big screens */
+    background: #fff;
+    border-radius: 40px;
+    align-items: stretch;
+    padding: 0; /* Removed padding so right panel can blend to the edge */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    overflow: hidden; /* Clips the inner corners to match the outer 40px radius */
+     transform: translateY(30px);
+    transition: transform 0.3s ease;
+}
+
+.popup-wrapper.active .donation-popup {
+    transform: translateY(0);
+}
+
+.popup-left {
+    flex: 1.1;
+    padding: 40px; 
+    color: black;
+}
+
+/* Optional: Make the text wrap better */
+.popup-left p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.mini-logo {
+  width: 60px; 
+  margin: 15px 0;
+  display: block;
+}
+
+.popup-left h2 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.popup-right {
+    flex: 1;
+    padding: 50px 40px;
+    background: #fff;
+    /* Directional shadow: only visible on the left side to separate from the image */
+    box-shadow: -20px 0 40px -10px rgba(0, 0, 0, 0.08); 
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(63, 147, 40);
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.secure-icon {
+    width: 40px;
+}
+
+.form-header h3 {
+    font-size: 1.8rem;
+}
+
+.toggle-group {
+    display: flex;
+    gap: 15px; /* Space between the two buttons */
+    margin-bottom: 25px;
+    width: 100%; /* Ensure the group takes full width */
+    
+}
+
+.amount-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.amount-grid button {
+    padding: 18px 5px; /* Bigger buttons for a bigger popup */
+    font-size: 1.1rem;
+}
+/* Buttons and Inputs */
+.amount-grid button {
+  background: white;
+  border: 1px solid #f2a968;
+  border-radius: 15px;
+  padding: 14px 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-group button {
+   flex: 1; /* This is the "magic" line: it forces both buttons to grow equally and fill the space */
+    background: white;
+    border: 1px solid #f2a968;
+    border-radius: 15px; /* Rounded corners like the pic */
+    padding: 12px 0; /* Vertical padding, 0 horizontal because flex handles width */
+    font-size: 1.1rem;
+    font-family: 'Georgia', serif; /* The second pic uses a Serif font */
+    cursor: pointer;
+    transition: 0.3s;/* This makes the color change smooth */
+}
+
+.toggle-group button:hover {
+    background-color: #ba5f0f; /* Fills the button with orange */
+    color: white;             /* Changes text to white so it's readable */
+    border-color: #d18b4a;    /* Makes the border a slightly darker orange */
+}
+.toggle-group button.active {
+    background-color: #bf681bad;
+    color: #ffffff; /* Keep it white, or change to black if you prefer */
+    border-color: #d18b4a;
+}
+
+
+.amount-grid button:hover, .amount-btn.active {
+    background: #fdf2e9;
+    border-color: #f2a968;
+}
+
+.custom-amount {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid #f2a968;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+.donate-btn {
+  width: 100%;
+  background: #f2a968;
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: pointer;
+  /* Shadow for the button itself */
+  box-shadow: 0 8px 20px rgba(242, 169, 104, 0.3);
+}

@@ -1,0 +1,83 @@
+/* PRIVACY POLICY SECTION */
+.privacy-policy-section {
+    background: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 10%;
+}
+
+.privacy-policy-container {
+    max-width: 900px;
+
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+
+    padding: 40px 30px;
+
+    text-align: center;
+}
+
+.privacy-policy-container h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+
+    margin-bottom: 25px;
+
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.privacy-policy-container p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+
+    color: #444;
+
+    margin-bottom: 18px;
+
+    text-align: justify;
+}
+.form-agreement {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.form-agreement label {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    align-items: start;
+    gap: 10px;
+
+    max-width: 450px;
+    width: 100%;
+}
+.form-agreement a {
+    display: inline-block;
+    color: #f29b59;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-agreement a:hover {
+    text-decoration: underline;
+}
+.popup-wrapper {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    backdrop-filter: blur(6px);
+}
+
+/* ACTIVE STATE */
+.popup-wrapper.active {
+    display: flex;
+}

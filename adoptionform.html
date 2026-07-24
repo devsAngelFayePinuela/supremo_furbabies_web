@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adoption Form</title>
+  <link rel="stylesheet" href="adoptionform-style.css">
+  <link rel="stylesheet" href="donatepopup-style.css">
+  <link rel="stylesheet" href="terms-style.css">
+</head>
+<body class="adoption-page">
+
+   
+
+  <div id="termsModal" class="modal">
+  <div class="modal-content">
+    
+    <h2>TERMS AND CONDITIONS <br>FOR ADOPTION</h2>
+    <ul>
+      <li>You must be at least 18 years old to adopt.</li>
+      <li>All adoptions are subject to approval.</li>
+      <li>You agree to provide a safe, loving environment.</li>
+      <li>Adoption fees must be paid in full before release.</li>
+      <li>You agree to provide proper food, shelter, medical care, and companionship for the adopted pet.</li>
+      <li>You must comply with local laws and regulations regarding pet ownership.</li>
+      <li>You agree not to sell, abandon, or mistreat the adopted pet.</li>
+      <li>You may not use the website for unlawful purposes or to distribute harmful content.</li>
+      <li>We reserve the right to suspend or terminate accounts that violate these terms.</li>
+      <li>Personal information collected during the adoption process will be used solely for adoption-related purposes.</li>
+      <li>We will not share your information with third parties without your consent, except as required by law.</li>
+      <li>Supremo Furbabies is not liable for any damages, injuries, or losses resulting from pet ownership.</li>
+      <li>We make no guarantees regarding the health, behavior, or lifespan of adopted pets.</li>
+      <li>We reserve the right to update or modify these terms at any time.</li>
+      <li>Continued use of the website after changes constitutes acceptance of the revised terms.</li>
+    </ul>
+    <button id="acceptBtn">ACCEPT</button>
+  </div>
+</div>
+
+  <header class="page-header">
+     <nav class="navbar">
+            <div class="logo">
+                <a href = "home.html">
+                    <img src="mainlogo/logo.png" alt="Paw Logo">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="aboutus.html" class="dropbtn">About Us ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Our Furbabies ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="adoptionform.html" class = "active">Adopt & Rescues</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="getinvolved.html">Get Involved</a> </li>
+
+                <li><a href="latest.html">Latest</a></li>
+            </ul>
+            
+            <a href="#" class="btn-donate-nav">Donate</a>
+        </nav>
+  </header>
+
+ <section class="adoption-form-section">
+    <div class="form-container">
+      <h2>Pet Adoption Registration Form</h2>
+      <form action="#" method="post" class="adoption-form">
+        
+        <!-- Pet Name -->
+        <label for="pet-name">Name of the pet you want to adopt *</label>
+        <input type="text" id="pet-name" name="pet-name" required>
+
+        <!-- Full Name -->
+        <label for="full-name">Your Full Name *</label>
+        <input type="text" id="full-name" name="full-name" placeholder="First Last" required>
+
+        <!-- Phone -->
+        <label for="phone">Phone number *</label>
+        <input type="tel" id="phone" name="phone" placeholder="09## ### ####" required>
+
+        <!-- Email -->
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="abcd123@gmail.com" required>
+
+        <!-- Residence -->
+        <label for="residence">Type of Residence *</label>
+        <input type="text" id="residence" name="residence" placeholder="House, Apartment, etc." required>
+
+        <!-- Occupation -->
+        <label for="occupation">Occupation</label>
+        <input type="text" id="occupation" name="occupation">
+
+        <!-- Birth Date -->
+        <label for="birth-date">Birth Date *</label>
+        <input type="date" id="birth-date" name="birth-date" required>
+
+         <!-- Company/Business Name -->
+      <label for="company">Company/Business Name *</label>
+      <input type="text" id="company" name="company" placeholder="Type N/A if unemployed" required>
+
+      <!-- Social Media Link -->
+      <label for="social">Social Media Link *</label>
+      <input type="url" id="social" name="social" placeholder="Enter FB/Twitter/X link" required>
+
+      <!-- Marital Status -->
+      <label>Status *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="status" value="Single" required> Single</label>
+        <label><input type="radio" name="status" value="Married"> Married</label>
+        <label><input type="radio" name="status" value="Others"> Others</label>
+      </div>
+
+      <!-- Motivation -->
+      <label>What prompted you to adopt from Supremo Furbabies? *</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="prompt[]" value="Friends"> Friends</label>
+        <label><input type="checkbox" name="prompt[]" value="Website"> Website</label>
+        <label><input type="checkbox" name="prompt[]" value="Social Media"> Social Media</label>
+        <label><input type="checkbox" name="prompt[]" value="Others"> Others</label>
+      </div>
+
+      <!-- Previous Adoption -->
+      <label>Have you adopted from Supremo Furbabies before? *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="previous" value="Yes" required> Yes</label>
+        <label><input type="radio" name="previous" value="No"> No</label>
+      </div>
+
+      <!-- Type of Animal -->
+      <label>What are you looking to adopt? *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="animal" value="Cat" required> Cat</label>
+        <label><input type="radio" name="animal" value="Dog"> Dog</label>
+        <label><input type="radio" name="animal" value="Both"> Both</label>
+        <label><input type="radio" name="animal" value="Not Decided"> Not Decided</label>
+      </div>
+
+      <!-- Specific Shelter Animal -->
+      <label>Are you applying to adopt a specific shelter animal? *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="specific" value="Yes" required> Yes</label>
+        <label><input type="radio" name="specific" value="No"> No</label>
+      </div>
+
+      <!-- Existing fields ... -->
+
+      <!-- Describe Ideal Pet -->
+      <label for="ideal-pet">Describe your ideal pet, including its sex, age, appearance, temperament, etc. *</label>
+      <textarea id="ideal-pet" name="ideal-pet" rows="6" cols="60" required></textarea>
+
+      <!-- What happens if you move -->
+      <label for="move-pet">What will happen to your pet if you move? *</label>
+      <textarea id="move-pet" name="move-pet" rows="6" cols="60" required></textarea>
+
+      <!-- Household prompts -->
+      <label>What prompted you to adopt from Supremo Furbabies? *</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="prompt[]" value="Living Alone"> Living Alone</label>
+        <label><input type="checkbox" name="prompt[]" value="Spouse"> Spouse</label>
+        <label><input type="checkbox" name="prompt[]" value="Parents"> Parents</label>
+        <label><input type="checkbox" name="prompt[]" value="Children Over 18"> Children Over 18</label>
+        <label><input type="checkbox" name="prompt[]" value="Children Below 18"> Children Below 18</label>
+        <label><input type="checkbox" name="prompt[]" value="Relatives"> Relatives</label>
+        <label><input type="checkbox" name="prompt[]" value="Roommates"> Roommate(s)</label>
+      </div>
+
+      <!-- Allergies -->
+      <label>Are any members of your household allergic to animals? *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="allergies" value="Yes" required> Yes</label>
+        <label><input type="radio" name="allergies" value="No"> No</label>
+      </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Keep your existing footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2 class="footer-logo">Supremo <br> Furbabies</h2>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=100063836844165"><img src="footer/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/gjprias/reels/"><img src="footer/instagram.png" alt="Instagram"></a>
+<a href="https://www.tiktok.com/@supremo.babies8?is_from_webapp=1&sender_device=pc"><img src="footer/tiktok.png" alt="TikTok"></a>
+        </div>
+      </div>
+
+      <div class="footer-mailing">
+        <h3>Mailing List</h3>
+        <p>Join the family and be part of a compassionate effort to give every animal a second chance!</p>
+        <div class="email-input-wrapper">
+          <input type="email" placeholder="Email Address" class="footer-input">
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <ul>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="contactus.html#privacy-section">PRIVACY POLICY</a></li>
+          <li><a href="#" class = "terms-open">TERMS & CONDITIONS</a></li>
+          <li><a href="#">SITE MAP</a></li>
+          <li><a href="contactus.html">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener("scroll", function(){
+      const nav = document.querySelector(".navbar");
+      if(window.scrollY > 50){
+        nav.style.background = "rgba(0,0,0,0.85)";
+        nav.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+      } else{
+        nav.style.background = "rgba(0,0,0,0.65)";
+        nav.style.boxShadow = "none";
+      }
+    });
+
+    window.onload = function() {
+    const modal = document.getElementById("termsModal");
+    const acceptBtn = document.getElementById("acceptBtn");
+
+    modal.style.display = "flex"; // show modal on load
+
+    acceptBtn.onclick = function() {
+      modal.style.display = "none"; // hide modal when accepted
+    };
+  };
+
+  const closeBtn = document.querySelector(".close-btn");
+const modal = document.getElementById("termsModal");
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+};
+  </script>
+
+  <!-- DONATE POPUP -->
+<div class="popup-wrapper" id="donateModal">
+    <div class="donation-popup">
+        <!-- LEFT SIDE -->
+        <div class="popup-left">
+            <img src="pop-up/dog-popup.png" alt="Donate Now" class="hero-img">
+            <img src="mainlogo/logo.png" class="mini-logo" alt="Logo"> 
+            <h2>Make a Difference today!</h2>
+            <p>When you donate with Supremo Furbabies, 100% of your donation will go to the shelter and help us provide care for our rescued animals.</p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="popup-right">
+            <div class="form-header">
+                <img src="pop-up/secure-icon.png" alt="Secure Icon" class="secure-icon">
+                <h3>Secure donation</h3>
+            </div>
+
+            <div class="toggle-group">
+                <button type="button" class="type-btn active"><b>Give once</b></button>
+                <button type="button" class="type-btn"><b>Monthly</b></button>
+            </div>
+
+            <div class="amount-grid">
+                <button type="button" class="amount-btn" data-amount="60000">₱ 60k</button>
+                <button type="button" class="amount-btn" data-amount="30000">₱ 30k</button>
+                <button type="button" class="amount-btn" data-amount="10000">₱ 10k</button>
+                <button type="button" class="amount-btn" data-amount="3000">₱ 3,000</button>
+                <button type="button" class="amount-btn" data-amount="1500">₱ 1,500</button>
+                <button type="button" class="amount-btn" data-amount="500">₱ 500</button>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="donation-input" placeholder="PHP" class="custom-amount">
+            </div>
+            <button class="donate-btn">Donate</button>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPTS (only once, at the very bottom) -->
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById("donateModal");
+    const amountBtns = document.querySelectorAll(".amount-btn");
+    const donationInput = document.getElementById("donation-input");
+
+    // OPEN
+    document.querySelectorAll(".open-donate, .btn-donate-nav, .btn-donate-main").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.classList.add("active");
+        });
+    });
+
+    // CLOSE — clicking outside
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("active");
+    });
+
+    // PRESET AMOUNTS
+    amountBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            amountBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            donationInput.value = "₱ " + Number(btn.getAttribute("data-amount")).toLocaleString();
+        });
+    });
+
+    // CUSTOM AMOUNT — clicking the input clears preset + value
+    donationInput.addEventListener("focus", () => {
+        amountBtns.forEach(b => b.classList.remove("active"));
+        donationInput.value = "";
+    });
+
+    // GIVE ONCE / MONTHLY TOGGLE
+    document.querySelectorAll(".type-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.querySelectorAll(".type-btn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+        });
+    });
+});</script>
+
+</body>
+</html>

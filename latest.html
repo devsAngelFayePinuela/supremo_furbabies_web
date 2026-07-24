@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="latest-style.css">
+    <link rel="stylesheet" href="donatepopup-style.css">
+    <title>Latest - Supremo Furbabies</title>
+</head>                       
+<body>
+
+       <nav class="navbar">
+            <div class="logo">                                                                                                                                                                             
+                <a href = "home.html">
+                    <img src="mainlogo/logo.png" alt="Paw Logo">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="aboutus.html" class="dropbtn">About Us ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="ourfurbabies.html" class="dropbtn">Our Furbabies ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ourfurbabies.html">Adopt & Rescues</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="getinvolved.html">Get Involved</a> </li>
+
+                <li><a href="latest.html" class = "active">Latest</a></li>
+            </ul>
+            
+            <a href="#" class="btn-donate-nav">Donate</a>
+        </nav>
+
+<section class="hero">
+     <div class="hero-cont">
+         <div class="hero-image"> 
+            <img src="hero-imgs\doge.jpg" alt="doge"></img>
+        </div>
+
+        <div class="hero-content">
+           <h3>WELCOME TO OUR FUR HAVEN! Lets explore...</h3>
+               <p>"Welcome to a space where every wag tells a story. At Supremo Furbabies, we are dedicated to 
+               sharing the journeys of our beloved furbabies—from rescue tales and daily adventures to tips on
+               giving them the best life possible. Explore our world 
+               and join a community that celebrates the unconditional love of our four-legged friends."</p>
+
+         <div class="hero-buttons">
+             <a href="#journey" class="btn btn-journey">Our Journey</a>
+             <a href="#highlights" class="btn btn-highlights">Furbabies Highlights</a>
+             <a href="#blogs" class="btn btn-blogs">Blogs</a> 
+             </div>
+         </div>
+     </div> 
+</section>
+
+<section id="journey" class="pawsitive-journey">
+    <h1 class="title">Our Pawsitive Journey!</h1>
+    
+         <div class="grid">
+            <div class="card">
+             <video autoplay muted loop playsinline class="youtube-video scroll-play">
+                 <source src="doge veds\youtube.mp4" type="video/mp4">
+             </video>
+                 <p class="description">
+                 “A collection of our favorite moments,<br>successful rescues, 
+                 and the heartwarming</br>transitions of our furbabies from the streets to</br> their forever homes.”
+                 </p>
+         </div>
+
+         <div class="card">
+             <video autoplay muted loop playsinline class="tiktok-video scroll-play">
+              <source src="doge veds\tiktok.mp4" type="video/mp4">
+            </video>
+         </div>
+             <div class="card">
+             <video autoplay muted loop playsinline class="facebook-video scroll-play">
+                 <source src="doge veds\facebook.mp4" type="video/mp4">
+             </video>
+             </div>
+        </div>
+    <script>
+        const videos =
+        document.querySelectorAll('.scroll-play');
+
+        const observer = new 
+        IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting){
+                    entry.target.play();
+                } else {
+                    entry.target.pause();
+                }
+            });
+        }, {threshold: 0.5});
+    
+    videos.forEach (video => {
+        observer.observe(video)
+    });
+    </script>
+    </div>
+</section>
+
+<div class="top-banner" id="highlights">Making memories, making magic, one paw at a time</div>
+
+<section id="highlights" class="spotlight">
+    
+    <h2 class="spot-title">Furbabies Spotlight</h2>
+
+    <div class="spot-grid">
+
+        <div class="item">
+            <div class="media">
+                <img src="spot-imgs\doge1.jpg" alt="cutie doge">
+            </div>
+            <div class="item-bubble">
+                <p>“SI ARCEL ANG PATUNAY HINDI NATUTULOG ANG DIYOS dahil kahit hirap na hirap si arcel tinulungan padin sya makatakas sa taong mapanakit sa Kanya. Kayat hindi rin kami titigil mag fundraise para kay Arcel at sa iba pa rescued na umaasa sa mga tulad natin.”</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="media">
+                <img src="spot-imgs\doge2.jpg" alt="cal doge">
+            </div>
+            <div class="item-bubble">
+                <p>“Nadaanan ng pet transpo namin sa Caloocan asong nanghihina po. Binalikan nya po kasi baka makuha ng dog pound. Need po ng vet dahil nanghihina si doggie. Baka may willing tumulong kay doggie pam-vet po nya.”</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="media">
+                <img src="spot-imgs\doges.jpg" alt="da gang">
+            </div>
+            <div class="item-bubble">
+                <p>“Baka may magdonate ng 2nd hand na upuan plastic na mahaba po para higaan ng mga rescued po. Kulang po kasi higaan nila. Ung hindi niyo po ginagamit, samin niyo nalang po idonate.”</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="media">
+                <img src="spot-imgs\doge3.jpg" alt="arcel cutie">
+            </div>
+            <div class="item-bubble">
+                <p>“Malapit na mamatay yan bakit papa-vet nio pa? Hangga't may humihinga may pag-asa. Mamatay man o hindi, gagawin natin lahat para mabuhay sila kahit madugtungan lang ang buhay nila.”</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="top-banner" id="blogs">In our organization, furbabies are Supremo</div>
+
+<section class="b-section">
+  <h2 class="b-title">Our Blog</h2>
+
+  <div class="b-list">
+
+    <div class="b-card">
+      <img src="blog-imgs/dogi.jpg" alt="senior dogi" class="b-img">
+      <div class="b-content">
+        <div class="b-headline">"They surrendered the dog because he had a disease."</div>
+        <div class="b-excerpt">Senior dog na po sya may kidney failure po. Kailangan ng tulong at pag-aaruga para sa kanya.</div>
+        <span class="b-readmore">read more</span>
+      </div>
+    </div>
+
+    <div class="b-card">
+      <img src="blog-imgs/tao po abs cbn.jpg" alt="tao po" class="b-img">
+      <div class="b-content">
+        <div class="b-headline">Tao Po: Nanay sa Malabon kumukupkop ng mga may sakit na aso at pusa</div>
+        <div class="b-excerpt">Isang nanay ang nagbibigay ng pag-asa sa mga alagang hayop na nangangailangan ng espesyal na pag-aalaga.</div>
+        <span class="b-readmore">read more</span>
+      </div>
+    </div>
+
+    <div class="b-card">
+      <img src="blog-imgs/dogi1.jpg" alt="senior dogi" class="b-img">
+      <div class="b-content">
+        <div class="b-headline">"They will be left alone. It is the last duty of Kuya Guard."</div>
+        <div class="b-excerpt">Two years nyang kasama sila. Ang matibay na ugnayan ng isang guwardya at ang mga aso na kanyang inalalayan.</div>
+        <span class="b-readmore">read more</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bottom-banner">Together is our pawvorite place to be.</div>
+</section>
+
+<header>
+    <section class="beoneofus-section">
+    <h2>Be One of Us!</h2>
+    <p class="beoneofus-subtitle">Whether you choose to Donate, Adopt, be a Member, or Sponsor, you’re giving them the second chance they’ve been waiting for.</p>
+
+    <div class="beoneofus-container">
+        <div class="action-card">
+            <img src="beoneofus/donatelogo.jpg" alt="Donate Logo" class="action-icon">
+            <h3>Donate</h3>
+            <p>Help provide food, shelter, and medical care for our rescued animals.</p>
+            <a href="donate.html" class="btn-action">Help Us</a>
+        </div>
+
+        <div class="action-card">
+            <img src="beoneofus/adoptlogo.jpg" alt="Adopt Logo" class="action-icon">
+            <h3>Adopt</h3>
+            <p>Give a rescued cat or dog a loving and forever home.</p>
+            <a href="ourfurbabies.html" class="btn-action">Bring a member</a>
+        </div>
+
+        <div class="action-card">
+            <img src="beoneofus/sponsorlogo.jpg" alt="Sponsor Logo" class="action-icon">
+            <h3>Sponsor</h3>
+            <p>Support a rescue animal by helping with their daily needs and care.</p>
+            <a href="getinvolved.html#sponsor" class="btn-action">Partner with us</a>
+        </div>
+    </div>
+
+    <div class="join-banner">
+        <h3>Join</h3>
+        <p>Want to join us? Let’s connect!</p>
+        <a href="getinvolved.html#volunteer" class="btn-action btn-join">Join us</a>
+    </div>
+</section>
+</header>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2 class="footer-logo">Supremo <br> Furbabies</h2>
+            <div class="social-links">
+                <a href="#"><img src="Footer\facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Footer\instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Footer\tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+
+        <div class="footer-mailing">
+            <h3>Mailing List</h3>
+            <p>Join the family and be part of a compassionate effort to give every animal a second chance!</p>
+            <div class="email-input-wrapper">
+                <input type="email" placeholder="Email Address" class="footer-input">
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <ul>
+        <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="contactus.html#privacy-section">PRIVACY POLICY</a></li>
+          <li><a href="#" class = "terms-open">TERMS & CONDITIONS</a></li>
+          <li><a href="#">SITE MAP</a></li>
+          <li><a href="contactus.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script>
+window.addEventListener("scroll", function(){
+   const nav = document.querySelector(".navbar");
+
+   if(window.scrollY > 50){
+      nav.style.background = "rgba(0,0,0,0.85)";
+      nav.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+   } else{
+      nav.style.background = "rgba(0,0,0,0.65)";
+      nav.style.boxShadow = "none";
+   }
+});
+</script>
+
+<!-- DONATE POPUP -->
+<div class="popup-wrapper" id="donateModal">
+    <div class="donation-popup">
+        <!-- LEFT SIDE -->
+        <div class="popup-left">
+            <img src="pop-up/dog-popup.png" alt="Donate Now" class="hero-img">
+            <img src="mainlogo/logo.png" class="mini-logo" alt="Logo"> 
+            <h2>Make a Difference today!</h2>
+            <p>When you donate with Supremo Furbabies, 100% of your donation will go to the shelter and help us provide care for our rescued animals.</p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="popup-right">
+            <div class="form-header">
+                <img src="pop-up/secure-icon.png" alt="Secure Icon" class="secure-icon">
+                <h3>Secure donation</h3>
+            </div>
+
+            <div class="toggle-group">
+                <button type="button" class="type-btn active"><b>Give once</b></button>
+                <button type="button" class="type-btn"><b>Monthly</b></button>
+            </div>
+
+            <div class="amount-grid">
+                <button type="button" class="amount-btn" data-amount="60000">₱ 60k</button>
+                <button type="button" class="amount-btn" data-amount="30000">₱ 30k</button>
+                <button type="button" class="amount-btn" data-amount="10000">₱ 10k</button>
+                <button type="button" class="amount-btn" data-amount="3000">₱ 3,000</button>
+                <button type="button" class="amount-btn" data-amount="1500">₱ 1,500</button>
+                <button type="button" class="amount-btn" data-amount="500">₱ 500</button>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="donation-input" placeholder="PHP" class="custom-amount">
+            </div>
+            <button class="donate-btn">Donate</button>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPTS (only once, at the very bottom) -->
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById("donateModal");
+    const amountBtns = document.querySelectorAll(".amount-btn");
+    const donationInput = document.getElementById("donation-input");
+
+    // OPEN
+    document.querySelectorAll(".open-donate, .btn-donate-nav, .btn-donate-main").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.classList.add("active");
+        });
+    });
+
+    // CLOSE — clicking outside
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("active");
+    });
+
+    // PRESET AMOUNTS
+    amountBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            amountBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            donationInput.value = "₱ " + Number(btn.getAttribute("data-amount")).toLocaleString();
+        });
+    });
+
+    // CUSTOM AMOUNT — clicking the input clears preset + value
+    donationInput.addEventListener("focus", () => {
+        amountBtns.forEach(b => b.classList.remove("active"));
+        donationInput.value = "";
+    });
+
+    // GIVE ONCE / MONTHLY TOGGLE
+    document.querySelectorAll(".type-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.querySelectorAll(".type-btn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+        });
+    });
+});</script>
+
+
+<script>
+    const track = document.querySelector('.carousel-track');
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    
+    let index = 0;
+
+    nextBtn.addEventListener('click', () => {
+        const cardWidth = document.querySelector('.rescue-card').offsetWidth + 20;
+        index++;
+        if (index > track.children.length - 4) index = 0; // Reset to start
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+    });
+
+    prevBtn.addEventListener('click', () => {
+        const cardWidth = document.querySelector('.rescue-card').offsetWidth + 20;
+        index--;
+        if (index < 0) index = track.children.length - 4; // Go to end
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+    });
+
+window.addEventListener("scroll", function(){
+   const nav = document.querySelector(".navbar");
+
+   if(window.scrollY > 50){
+      nav.style.background = "rgba(0,0,0,0.85)";
+      nav.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+   } else{
+      nav.style.background = "rgba(0,0,0,0.65)";
+      nav.style.boxShadow = "none";
+   }
+});
+
+</script>
+
+<div class="popup-wrapper" id="termsModal">
+    <div class="terms-popup">
+        <div class="terms-header">
+            <h2>Terms and Conditions</h2>
+            <p class="terms-subtitle">Supremo Furbabies Website</p>
+            <button class="terms-close-btn" id="termsCloseBtn">✕</button>
+        </div>
+
+        <div class="terms-body">
+            <p class="terms-intro">Welcome to the Supremo Furbabies website. By accessing or using this website, users agree to follow and be bound by the following Terms and Conditions. Please read them carefully before using the website.</p>
+
+            <div class="terms-section">
+                <h3>1. Acceptance of Terms</h3>
+                <p>By using the Supremo Furbabies website, users acknowledge that they have read, understood, and agreed to these Terms and Conditions. If users do not agree with any part of these terms, they should discontinue use of the website immediately.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>2. Purpose of the Website</h3>
+                <p>The Supremo Furbabies website is created to:</p>
+                <ul>
+                    <li>Promote animal rescue and adoption</li>
+                    <li>Provide information about rescued dogs and cats</li>
+                    <li>Allow users to apply for adoption</li>
+                    <li>Encourage volunteering and sponsorship</li>
+                    <li>Sell pet-related products through the online shop</li>
+                    <li>Share educational blogs and updates</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h3>3. User Responsibilities</h3>
+                <p>Users agree to:</p>
+                <ul>
+                    <li>Provide accurate and truthful information when filling out forms</li>
+                    <li>Use the website only for lawful purposes</li>
+                    <li>Avoid posting harmful, abusive, or inappropriate content</li>
+                    <li>Respect the rights and safety of animals, staff, and other users</li>
+                    <li>Refrain from attempting to damage or hack the website</li>
+                </ul>
+                <p>Supremo Furbabies reserves the right to restrict access to users who violate these responsibilities.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>4. Adoption Policy</h3>
+                <p>Submitting an adoption application does not guarantee approval. Supremo Furbabies has the right to:</p>
+                <ul>
+                    <li>Review and verify all submitted information</li>
+                    <li>Conduct interviews or background checks if necessary</li>
+                    <li>Reject applications that do not meet adoption requirements</li>
+                    <li>Ensure that rescued animals are placed in safe and responsible homes</li>
+                </ul>
+                <p>Adopters are expected to provide proper care, shelter, food, and medical attention for adopted animals.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>5. Donations and Sponsorships</h3>
+                <p>All donations and sponsorships made through the website are voluntary and non-refundable unless otherwise stated. Funds collected will be used for:</p>
+                <ul>
+                    <li>Animal rescue operations</li>
+                    <li>Veterinary care</li>
+                    <li>Shelter maintenance</li>
+                    <li>Food and supplies for rescued animals</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h3>6. Intellectual Property</h3>
+                <p>All content on the website, including logos, text, images, graphics, and designs, is the property of Supremo Furbabies unless otherwise stated. Unauthorized copying, reproduction, or distribution of website content is prohibited.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>7. Privacy and Data Protection</h3>
+                <p>Personal information collected from users will only be used for website-related transactions, applications, communication, and services. Supremo Furbabies will take reasonable measures to protect user information from unauthorized access.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>8. Limitation of Liability</h3>
+                <p>Supremo Furbabies will not be held liable for:</p>
+                <ul>
+                    <li>Temporary website unavailability</li>
+                    <li>Technical issues or system interruptions</li>
+                    <li>Loss of data caused by unauthorized access</li>
+                    <li>Actions of third-party services connected to the website</li>
+                </ul>
+                <p>Users access and use the website at their own risk.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>9. Changes to Terms and Conditions</h3>
+                <p>Supremo Furbabies reserves the right to modify or update these Terms and Conditions at any time without prior notice. Continued use of the website after changes are posted means users accept the updated terms.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>10. Contact Information</h3>
+                <p>For questions or concerns regarding these Terms and Conditions, users may contact:</p>
+                <p><strong>Supremo Furbabies</strong><br>
+                Email: <a href="mailto:supremo.furbabies@gmail.com">supremo.furbabies@gmail.com</a><br>
+                Phone: +63 XXX XXX XXXX</p>
+            </div>
+
+            <div class="terms-agree-box">
+                <p>By using this website, users confirm that they agree to comply with these Terms and Conditions.</p>
+                <button class="btn-terms-agree" id="termsAgreeBtn">I Understand</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+// TERMS & CONDITIONS MODAL
+const termsModal = document.getElementById("termsModal");
+
+document.querySelectorAll(".open-terms").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        termsModal.classList.add("active");
+    });
+});
+
+// Still works when clicked from footer too
+document.querySelectorAll(".open-terms").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        termsModal.classList.add("active");
+    });
+});
+
+document.getElementById("termsCloseBtn").addEventListener("click", () => {
+    termsModal.classList.remove("active");
+});
+
+document.getElementById("termsAgreeBtn").addEventListener("click", () => {
+    termsModal.classList.remove("active");
+});
+
+termsModal.addEventListener("click", (e) => {
+    if (e.target === termsModal) termsModal.classList.remove("active");
+});
+</script>
+
+<!-- PRIVACY POLICY MODAL -->
+<div class="popup-wrapper" id="privacyModal">
+    <div class="terms-popup">
+
+        <div class="terms-header">
+            <h2>Privacy Policy</h2>
+            <p class="terms-subtitle">Supremo Furbabies Website</p>
+            <button class="terms-close-btn" id="privacyCloseBtn">✕</button>
+        </div>
+
+        <div class="terms-body">
+
+            <p>
+                We collect personal information including your name,
+                contact details, email address, and submitted application
+                information solely for processing volunteer, sponsorship,
+                donation, and employment applications within Supremo Furbabies.
+            </p>
+
+            <br>
+
+            <p>
+                All submitted information remains strictly confidential
+                and will never be sold, rented, or shared with third
+                parties for marketing purposes.
+            </p>
+
+            <br>
+
+            <p>
+                Data may only be accessed by authorized staff,
+                veterinarians, or partner organizations when necessary
+                for rescue operations and animal welfare services.
+            </p>
+
+            <br>
+
+            <p>
+                By submitting forms on this website, users consent
+                to the collection and use of their information for
+                shelter-related communication and processes.
+            </p>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const privacyModal = document.getElementById("privacyModal");
+
+document.querySelectorAll(".open-privacy").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        privacyModal.classList.add("active");
+    });
+});
+
+document.getElementById("privacyCloseBtn").addEventListener("click", () => {
+    privacyModal.classList.remove("active");
+});
+
+privacyModal.addEventListener("click", (e) => {
+    if (e.target === privacyModal) {
+        privacyModal.classList.remove("active");
+    }
+});
+
+</script>
+
+</body>
+</html>

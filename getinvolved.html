@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="getinvolved-style.css">
+    <link rel="stylesheet" href = "donatepopup-style.css">
+    <link rel="stylesheet" href="terms-style.css">
+    <title>Get Involved</title>
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="home.html">
+                <img src="mainlogo/logo.png" alt="Paw Logo"> 
+                </a>
+            </div>           
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="aboutus.html" class="dropbtn">About Us ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="ourfurbabies.html" class="dropbtn">Our Furbabies ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ourfurbabies.html#filters">Adopt & Rescues</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="get-involved.html" class="active">Get Involved</a></li>
+
+                <li><a href="latest.html">Latest</a></li>
+            </ul>
+            
+            <a href="#" class="btn-donate-nav">Donate</a>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Be Part of Their Second Chance!</h1>
+            <p>Support, volunteer, or work with us! <br><br> Be the reason they get the love and care they have been waiting for.</p>
+        </div>
+    </header>    
+
+    <section class="roles-section-wrapper">
+
+        <div class="roles-overview">
+
+            <div class="role-line">
+                <img src = "getinvolvedheader/Volutab.jpg" alt = "Volunteer" class="role-image">
+                <h3>Volunteer</h3>
+                <p>Give your time and effort by helping care for rescues, assisting in events, and supporting daily shelter work.</p>
+            </div>
+
+            <div class="role-line">
+                <img src = "getinvolvedheader/Sponsor.jpg" alt = "Sponsor" class="role-image">
+                <h3>Sponsor</h3>
+                <p>Provide financial support to help cover food, medical care, and shelter needs.</p>
+            </div>
+
+            <div class="role-line">
+                <img src = "getinvolvedheader/GetHired.jpg" alt = "Get Hired" class="role-image">
+                <h3>Get Hired</h3>
+                <p>Join our team and make a long-term impact in animal care and operations.</p>
+            </div>
+        </div>
+    </section>
+
+
+   <section id="qualifications" class="qualifications-policies-section">
+        <h1>Our Qualifications and Policies</h1>
+        <p>Click a role to view details</p>
+
+        <div class="qualifications-policies-container">
+
+            <div class="role-card" onclick="openModal('sponsor')">
+                <img src="icons/sponsor.png" class="role-icon">
+                <h3>Sponsor</h3>
+            </div>
+
+            <div class="role-card" onclick="openModal('volunteer')">
+                <img src="icons/volunteer.png" class="role-icon">
+                <h3>Volunteer</h3>
+            </div>
+
+            <div class="role-card" onclick="openModal('gethired')">
+                <img src="icons/getHired.png" class="role-icon">
+                <h3>Get Hired</h3>
+            </div>
+    </section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeModal()">×</span>
+
+        <h2 id="modal-title"></h2>
+
+        <div class="modal-body">
+            <div class="modal-card" id="modal-qualifications"></div>
+            <div class="modal-card" id="modal-policies"></div>
+        </div>
+
+        <div class="modal-actions">
+            <button id="register-btn">Register</button>
+        </div>
+
+    </div>
+</div>
+
+<div id="form-modal" class="modal">
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeFormModal()">&times;</span>
+
+        <!-- SPONSOR FORM -->
+        <form class="registration-form sponsor-form">
+
+            <h2>Sponsor Registration</h2>
+            <p>Fill out your details to become a sponsor.</p>
+
+            <input type="text" placeholder="Full Name (e.g. Juan Dela Cruz)" required>
+            <input type="email" placeholder="Email (e.g. sample@gmail.com)" required>
+            <input type="tel" placeholder="Contact Number (e.g. 09123456789)">
+
+            <textarea placeholder="Why do you want to join?"></textarea>
+
+            <div class="role-box sponsor-box active">
+                <h3>Sponsor Information</h3>
+
+                <label>Monthly Sponsorship Amount</label>
+                <input type="number" min="1000" value="1000" required>
+
+                <small>Minimum ₱1,000 per rescue per month</small>
+
+                <input type="text" placeholder="Donation Method (GCash / Bank / Cash)">
+                <input type="text" placeholder="Preferred Rescue (optional)">
+                <textarea placeholder="Company Name (optional)"></textarea>
+            </div>
+
+<div class="form-agreement">
+    <label>
+        <input type="checkbox" required>
+
+        <span>
+        I agree to the
+        <a href="#" class="open-privacy">Privacy Policy</a>
+        and
+        <a href="#" class="open-terms">Terms & Conditions</a>.
+        </span>
+    </label>
+</div>
+
+            <button type="submit">Submit Sponsor</button>
+</form>
+
+        <!-- VOLUNTEER FORM -->
+        <form class="registration-form volunteer-form">
+
+            <h2>Volunteer Registration</h2>
+            <p>Join our volunteer team.</p>
+
+            <input type="text" placeholder="Full Name (e.g. Juan Dela Cruz)" required>
+            <input type="email" placeholder="Email (e.g. sample@gmail.com)" required>
+            <input type="tel" placeholder="Contact Number (e.g. 09123456789)">
+
+            <textarea placeholder="Why do you want to join?"></textarea>
+
+            <div class="role-box volunteer-box active">
+                <h3>Volunteer Information</h3>
+
+                <input type="text" placeholder="Availability (e.g. 2–3 days/week)">
+                <input type="text" placeholder="Preferred Tasks (feeding, cleaning, events)">
+                <input type="text" placeholder="Experience with animals (optional)">
+                <input type="text" placeholder="Emergency Contact (optional)">
+            </div>
+
+<div class="form-agreement">
+    <label>
+        <input type="checkbox" required>
+
+        <span>
+        I agree to the
+        <a href="#" class="open-privacy">Privacy Policy</a>
+        and
+        <a href="#" class="open-terms">Terms & Conditions</a>.
+        </span>
+    </label>
+</div>
+
+        <button type="submit">Submit Volunteer</button>
+</form>
+
+        <!-- GET HIRED FORM -->
+        <form class="registration-form hire-form">
+
+            <h2>Job Application</h2>
+            <p>Apply to join our team.</p>
+
+            <input type="text" placeholder="Full Name (e.g. Juan Dela Cruz)" required>
+            <input type="email" placeholder="Email (e.g. sample@gmail.com)" required>
+            <input type="tel" placeholder="Contact Number (e.g. 09123456789)">
+
+            <textarea placeholder="Why do you want to join?"></textarea>
+
+            <div class="role-box hired-box active">
+                <h3>Employment Information</h3>
+
+                <input type="text" placeholder="Relevant Experience (animal care, vet, etc.)">
+                <input type="text" placeholder="Preferred Position">
+                <input type="text" placeholder="Work Schedule (full-time / part-time)">
+                <input type="text" placeholder="Previous Work Experience (optional)">
+            </div>
+
+<div class="form-agreement">
+    <label>
+        <input type="checkbox" required>
+
+        <span>
+        I agree to the
+        <a href="#" class="open-privacy">Privacy Policy</a>
+        and
+        <a href="#" class="open-terms">Terms & Conditions</a>.
+        </span>
+    </label>
+</div>
+
+            <button type="submit">Submit Application</button>
+</form>
+    </div>
+</div>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2 class="footer-logo">Supremo <br> Furbabies</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100063836844165"><img src="footer/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/gjprias/reels/"><img src="footer/instagram.png" alt="Instagram"></a>
+                <a href="https://www.tiktok.com/@supremo.babies8?is_from_webapp=1&sender_device=pc"><img src="footer/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+
+        <div class="footer-mailing">
+            <h3>Mailing List</h3>
+            <p>Join the family and be part of a compassionate effort to give every animal a second chance!</p>
+            <div class="email-input-wrapper">
+                <input type="email" placeholder="Email Address" class="footer-input">
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <ul>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="#" class="open-privacy">PRIVACY POLICY</a></li>
+                <li><a href="#" class="open-terms">TERMS & CONDITIONS</a></li>
+                <li><a href="#">SITE MAP</a></li>
+                <li><a href="contactus.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script>
+let selectedRole = "";
+
+function openModal(role) {
+    selectedRole = role;
+    document.getElementById("modal").style.display = "flex";
+
+    if(role === "sponsor") {
+        document.getElementById("modal-title").innerText = "Sponsor";
+
+        document.getElementById("modal-qualifications").innerHTML = `
+            <h3>Qualifications</h3>
+            <ul>
+                <li>Willing to sponsor at least ₱1,000 per rescue per month</li>
+                <li>Open to supporting either a specific rescue or general shelter needs</li>
+                <li>Able to provide financial support through approved donation channels</li>
+                <li>Understands that sponsorship is a support system, not ownership</li>
+                <li>Committed to helping improve the welfare of rescued animals</li>
+            </ul>
+        `;
+
+        document.getElementById("modal-policies").innerHTML = `
+            <h3>Policies</h3>
+            <ul>
+                <li> ₱1,000 sponsorship covers approximately one month of care per rescue</li>
+                <li> Monthly sponsorship directly supports food, medical care, and shelter maintenance</li>
+                <li> Sponsors may receive progress updates, but scheduling depends on shelter capacity</li>
+                <li> Sponsorship does not guarantee exclusive control over a rescue</li>
+                <li> All sponsorships are non-refundable once processed</li>
+            </ul>
+        `;
+    }
+
+    else if(role === "volunteer") {
+        document.getElementById("modal-title").innerText = "Volunteer";
+
+        document.getElementById("modal-qualifications").innerHTML = `
+            <h3>Qualifications</h3>
+            <ul>
+                <li> Must be at least 18 years old</li>
+                <li> Must be able to commit at least 4–8 hours per week</li>
+                <li> Must be physically able to assist in light to moderate shelter tasks</li>
+                <li> Must be willing to undergo orientation before starting</li>
+                <li> Must demonstrate genuine willingness to work with animals</li>
+            </ul>
+        `;
+
+        document.getElementById("modal-policies").innerHTML = `
+            <h3>Policies</h3>
+            <ul>
+                <li> All volunteers must complete orientation before being assigned tasks</li>
+                <li> Volunteers are assigned based on shelter needs and availability</li>
+                <li> Strict adherence to animal handling guidelines is required at all times</li>
+                <li> Volunteers must respect schedules and notify in advance for absences</li>
+                <li> Only trained staff may handle medical or high-risk procedures</li>
+            </ul>
+        `;
+    }
+
+    else if(role === "gethired") {
+        document.getElementById("modal-title").innerText = "Get Hired";
+
+        document.getElementById("modal-qualifications").innerHTML = `
+            <h3>Qualifications</h3>
+            <ul>
+                <li> Must have relevant experience in animal care, veterinary work, or related field</li>
+                <li> Must be able to work full-time or scheduled shifts depending on role assignment</li>
+                <li> Must demonstrate strong responsibility in handling animals and shelter tasks</li>
+                <li> Must pass interview and basic skill assessment</li>
+                <li> Must be willing to work in a team-based environment</li>
+            </ul>
+        `;
+
+        document.getElementById("modal-policies").innerHTML = `
+            <h3>Policies</h3>
+            <ul>
+                <li> Employees must strictly follow assigned schedules and duties</li>
+                <li> All staff must comply with animal welfare and safety protocols at all times</li>
+                <li> Confidentiality of shelter records, cases, and internal operations must be maintained</li>
+                <li> Performance is reviewed regularly to ensure quality of care and efficiency</li>
+                <li> Violations of shelter policies may result in disciplinary action or termination</li>
+            </ul>
+        `;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("register-btn").addEventListener("click", function () {
+        closeModal();
+        openForm(selectedRole);
+    });
+});
+
+function openForm(role) {
+    document.getElementById("form-modal").style.display = "flex";
+
+    // show ONLY correct form
+    document.querySelectorAll(".registration-form").forEach(form => {
+        form.classList.remove("active");
+    });
+
+    if (role === "sponsor") {
+        document.querySelector(".sponsor-form").classList.add("active");
+    }
+
+    else if (role === "volunteer") {
+        document.querySelector(".volunteer-form").classList.add("active");
+    }
+
+    else if (role === "gethired") {
+        document.querySelector(".hire-form").classList.add("active");
+    }
+}
+
+function closeFormModal() {
+    document.getElementById("form-modal").style.display = "none";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+<script>
+window.addEventListener("scroll", function(){
+   const nav = document.querySelector(".navbar");
+
+   if(window.scrollY > 50){
+      nav.style.background = "rgba(0,0,0,0.85)";
+      nav.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+   } else{
+      nav.style.background = "rgba(0,0,0,0.65)";
+      nav.style.boxShadow = "none";
+   }
+});
+</script>
+
+<!-- DONATE POPUP -->
+<div class="popup-wrapper" id="donateModal">
+    <div class="donation-popup">
+        <!-- LEFT SIDE -->
+        <div class="popup-left">
+            <img src="pop-up/dog-popup.png" alt="Donate Now" class="hero-img">
+            <img src="mainlogo/logo.png" class="mini-logo" alt="Logo"> 
+            <h2>Make a Difference today!</h2>
+            <p>When you donate with Supremo Furbabies, 100% of your donation will go to the shelter and help us provide care for our rescued animals.</p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="popup-right">
+            <div class="form-header">
+                <img src="pop-up/secure-icon.png" alt="Secure Icon" class="secure-icon">
+                <h3>Secure donation</h3>
+            </div>
+
+            <div class="toggle-group">
+                <button type="button" class="type-btn active"><b>Give once</b></button>
+                <button type="button" class="type-btn"><b>Monthly</b></button>
+            </div>
+
+            <div class="amount-grid">
+                <button type="button" class="amount-btn" data-amount="60000">₱ 60k</button>
+                <button type="button" class="amount-btn" data-amount="30000">₱ 30k</button>
+                <button type="button" class="amount-btn" data-amount="10000">₱ 10k</button>
+                <button type="button" class="amount-btn" data-amount="3000">₱ 3,000</button>
+                <button type="button" class="amount-btn" data-amount="1500">₱ 1,500</button>
+                <button type="button" class="amount-btn" data-amount="500">₱ 500</button>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="donation-input" placeholder="PHP" class="custom-amount">
+            </div>
+            <button class="donate-btn">Donate</button>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPTS (only once, at the very bottom) -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* DONATE MODAL */
+    const donateModal = document.getElementById("donateModal");
+
+    function openDonate() {
+        donateModal.classList.add("active");
+    }
+
+    function closeDonate(e) {
+        if (e.target === donateModal) {
+            donateModal.classList.remove("active");
+        }
+    }
+
+    // open buttons (NAV + others)
+    document.querySelectorAll(".btn-donate-nav, .open-donate, .btn-donate-main")
+        .forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                openDonate();
+            });
+        });
+
+    donateModal.addEventListener("click", closeDonate);
+
+    /* DONATION AMOUNT UI */
+    const amountBtns = document.querySelectorAll(".amount-btn");
+    const donationInput = document.getElementById("donation-input");
+
+    amountBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            amountBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            donationInput.value =
+                "₱ " + Number(btn.dataset.amount).toLocaleString();
+        });
+    });
+
+    donationInput.addEventListener("focus", () => {
+        amountBtns.forEach(b => b.classList.remove("active"));
+        donationInput.value = "";
+    });
+
+    /* TERMS + PRIVACY MODALS */
+    const termsModal = document.getElementById("termsModal");
+    const privacyModal = document.getElementById("privacyModal");
+
+    document.querySelectorAll(".open-terms").forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            termsModal.classList.add("active");
+        });
+    });
+
+    document.querySelectorAll(".open-privacy").forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            privacyModal.classList.add("active");
+        });
+    });
+
+    document.getElementById("termsCloseBtn").onclick = () =>
+        termsModal.classList.remove("active");
+
+    document.getElementById("privacyCloseBtn").onclick = () =>
+        privacyModal.classList.remove("active");
+
+    document.getElementById("termsAgreeBtn").onclick = () =>
+        termsModal.classList.remove("active");
+
+    termsModal.addEventListener("click", (e) => {
+        if (e.target === termsModal) termsModal.classList.remove("active");
+    });
+
+    privacyModal.addEventListener("click", (e) => {
+        if (e.target === privacyModal) privacyModal.classList.remove("active");
+    });
+
+});
+</script>
+
+
+<div class="popup-wrapper" id="termsModal">
+    <div class="terms-popup">
+        <div class="terms-header">
+            <h2>Terms and Conditions</h2>
+            <p class="terms-subtitle">Supremo Furbabies Website</p>
+            <button class="terms-close-btn" id="termsCloseBtn">✕</button>
+        </div>
+
+        <div class="terms-body">
+            <p class="terms-intro">Welcome to the Supremo Furbabies website. By accessing or using this website, users agree to follow and be bound by the following Terms and Conditions. Please read them carefully before using the website.</p>
+
+            <div class="terms-section">
+                <h3>1. Acceptance of Terms</h3>
+                <p>By using the Supremo Furbabies website, users acknowledge that they have read, understood, and agreed to these Terms and Conditions. If users do not agree with any part of these terms, they should discontinue use of the website immediately.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>2. Purpose of the Website</h3>
+                <p>The Supremo Furbabies website is created to:</p>
+                <ul>
+                    <li>Promote animal rescue and adoption</li>
+                    <li>Provide information about rescued dogs and cats</li>
+                    <li>Allow users to apply for adoption</li>
+                    <li>Encourage volunteering and sponsorship</li>
+                    <li>Sell pet-related products through the online shop</li>
+                    <li>Share educational blogs and updates</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h3>3. User Responsibilities</h3>
+                <p>Users agree to:</p>
+                <ul>
+                    <li>Provide accurate and truthful information when filling out forms</li>
+                    <li>Use the website only for lawful purposes</li>
+                    <li>Avoid posting harmful, abusive, or inappropriate content</li>
+                    <li>Respect the rights and safety of animals, staff, and other users</li>
+                    <li>Refrain from attempting to damage or hack the website</li>
+                </ul>
+                <p>Supremo Furbabies reserves the right to restrict access to users who violate these responsibilities.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>4. Adoption Policy</h3>
+                <p>Submitting an adoption application does not guarantee approval. Supremo Furbabies has the right to:</p>
+                <ul>
+                    <li>Review and verify all submitted information</li>
+                    <li>Conduct interviews or background checks if necessary</li>
+                    <li>Reject applications that do not meet adoption requirements</li>
+                    <li>Ensure that rescued animals are placed in safe and responsible homes</li>
+                </ul>
+                <p>Adopters are expected to provide proper care, shelter, food, and medical attention for adopted animals.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>5. Donations and Sponsorships</h3>
+                <p>All donations and sponsorships made through the website are voluntary and non-refundable unless otherwise stated. Funds collected will be used for:</p>
+                <ul>
+                    <li>Animal rescue operations</li>
+                    <li>Veterinary care</li>
+                    <li>Shelter maintenance</li>
+                    <li>Food and supplies for rescued animals</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h3>6. Intellectual Property</h3>
+                <p>All content on the website, including logos, text, images, graphics, and designs, is the property of Supremo Furbabies unless otherwise stated. Unauthorized copying, reproduction, or distribution of website content is prohibited.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>7. Privacy and Data Protection</h3>
+                <p>Personal information collected from users will only be used for website-related transactions, applications, communication, and services. Supremo Furbabies will take reasonable measures to protect user information from unauthorized access.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>8. Limitation of Liability</h3>
+                <p>Supremo Furbabies will not be held liable for:</p>
+                <ul>
+                    <li>Temporary website unavailability</li>
+                    <li>Technical issues or system interruptions</li>
+                    <li>Loss of data caused by unauthorized access</li>
+                    <li>Actions of third-party services connected to the website</li>
+                </ul>
+                <p>Users access and use the website at their own risk.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>9. Changes to Terms and Conditions</h3>
+                <p>Supremo Furbabies reserves the right to modify or update these Terms and Conditions at any time without prior notice. Continued use of the website after changes are posted means users accept the updated terms.</p>
+            </div>
+
+            <div class="terms-section">
+                <h3>10. Contact Information</h3>
+                <p>For questions or concerns regarding these Terms and Conditions, users may contact:</p>
+                <p><strong>Supremo Furbabies</strong><br>
+                Email: <a href="mailto:supremo.furbabies@gmail.com">supremo.furbabies@gmail.com</a><br>
+                Phone: +63 XXX XXX XXXX</p>
+            </div>
+
+            <div class="terms-agree-box">
+                <p>By using this website, users confirm that they agree to comply with these Terms and Conditions.</p>
+                <button class="btn-terms-agree" id="termsAgreeBtn">I Understand</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PRIVACY POLICY MODAL -->
+<div class="popup-wrapper" id="privacyModal">
+    <div class="terms-popup">
+
+        <div class="terms-header">
+            <h2>Privacy Policy</h2>
+            <p class="terms-subtitle">Supremo Furbabies Website</p>
+            <button class="terms-close-btn" id="privacyCloseBtn">✕</button>
+        </div>
+
+        <div class="terms-body">
+
+            <p>
+                We collect personal information including your name,
+                contact details, email address, and submitted application
+                information solely for processing volunteer, sponsorship,
+                donation, and employment applications within Supremo Furbabies.
+            </p>
+
+            <br>
+
+            <p>
+                All submitted information remains strictly confidential
+                and will never be sold, rented, or shared with third
+                parties for marketing purposes.
+            </p>
+
+            <br>
+
+            <p>
+                Data may only be accessed by authorized staff,
+                veterinarians, or partner organizations when necessary
+                for rescue operations and animal welfare services.
+            </p>
+
+            <br>
+
+            <p>
+                By submitting forms on this website, users consent
+                to the collection and use of their information for
+                shelter-related communication and processes.
+            </p>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+// TERMS & CONDITIONS MODAL
+const termsModal = document.getElementById("termsModal");
+
+// Still works when clicked from footer too
+document.querySelectorAll(".open-terms").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        termsModal.classList.add("active");
+    });
+});
+
+document.getElementById("termsCloseBtn").addEventListener("click", () => {
+    termsModal.classList.remove("active");
+});
+
+document.getElementById("termsAgreeBtn").addEventListener("click", () => {
+    termsModal.classList.remove("active");
+});
+
+termsModal.addEventListener("click", (e) => {
+    if (e.target === termsModal) termsModal.classList.remove("active");
+});
+
+// PRIVACY POLICY MODAL
+const privacyModal = document.getElementById("privacyModal");
+
+document.querySelectorAll(".open-privacy").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        privacyModal.classList.add("active");
+    });
+});
+
+document.getElementById("privacyCloseBtn").addEventListener("click", () => {
+    privacyModal.classList.remove("active");
+});
+
+privacyModal.addEventListener("click", (e) => {
+    if (e.target === privacyModal) {
+        privacyModal.classList.remove("active");
+    }
+});
+</script>
+
+</body>
+</html>

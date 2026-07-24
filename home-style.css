@@ -1,0 +1,957 @@
+/* Lahat lagyan ng ganito*/
+body {
+    opacity: 0;
+    animation: fadeInPage 0.8s ease forwards;
+    overflow-x: hidden;
+}
+
+@keyframes fadeInPage {
+    to {
+        opacity: 1;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alice',serif;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('Pictures/Home.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 50px;
+
+    /* Added for sticky/following navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+}
+
+.logo img { height: 60px; }
+
+/* HAMBURGER BUTTON STYLES */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-links li {
+    display: flex;        
+    align-items: center;  
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    line-height: 1; 
+    display: inline-block;
+}
+
+.nav-links li a.active {
+    color: #e6a765;
+    text-decoration: underline;
+    text-decoration-color: #e6a765;
+    text-underline-offset: 5px; 
+    padding-bottom: 0; 
+    border-bottom: none; 
+}
+
+/* --- HOVER DROPDOWN LOGIC --- */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: rgb(172, 165, 165);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    top: 100%; 
+    left: 0;
+    list-style: none;
+    z-index: 1002;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    color: #333 !important;
+    padding: 10px 20px;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+    color: #e6a765 !important;
+}
+
+/* Buttons and Hero Text */
+.btn-donate-nav { 
+    background-color: #e6a765; 
+    padding: 10px 25px; 
+    border-radius: 8px; 
+    color: white; 
+    font-weight: bold; 
+    transition: 0.3s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.btn-donate-nav:hover {
+    background-color: #d48f4d; 
+    color: #ffffff;
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.hero-content { text-align: center; margin-top: auto; margin-bottom: auto; padding-top: 50px; }
+.hero-content h1,
+.hero-content p,
+
+.hero-content p {
+    animation-delay: 0.2s;
+}
+
+.btn-donate-main {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero-content h1 { font-size: 5rem; font-weight: 800; }
+.hero-content p { font-size: 2rem; }
+.btn-donate-main {
+    background-color: #e6a765;
+    padding: 15px 40px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 50px;
+    transition: 0.3s;
+}
+
+.btn-donate-main:hover {
+    background-color: #d48f4d; 
+    color: #ffffff;
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 1;
+}
+
+.intro-section {
+    padding: 80px 10%; 
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex; 
+    align-items: center; 
+    max-width: 1200px;
+    gap: 80px;
+    margin: 0 auto;
+}
+
+.image-wrapper {
+    position: relative;
+    flex-shrink: 0; 
+}
+
+.redgirl { 
+    width: 450px; 
+    height: auto;
+    border-radius: 25px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.redgirl-content {
+    flex: 1;
+    text-align: left;
+}
+
+.redgirl-content h2 { 
+    font-size: 3rem; 
+    font-weight: 900;
+    color: #000; 
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.redgirl-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.quote-bubble {
+    position: absolute;
+    bottom: -20px; 
+    left: 20px;
+    background-color: #fdfaf3;
+    padding: 20px 30px;
+    border-radius: 15px 50px 50px 50px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+}
+
+.quote-bubble p {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.rescue-section {
+    background-color: #f29b59; 
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.rescue-section h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.rescue-subtitle {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-wrapper {
+    overflow: hidden; 
+    width: 90%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rescue-card {
+    background: transparent;
+    min-width: 250px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.rescue-card:hover {
+    transform: translateY(-10px);
+}
+
+.rescue-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.rescue-card h3 {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.prev-btn, .next-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.btn-see-more {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    background-color: #f1f1f1;
+    color: black;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-see-more:hover {
+    background-color: #e6a765;
+    color: rgb(255, 255, 255);
+}
+
+.shelter-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.shelter-section h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.shelter-subtitle {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.shelter-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; 
+}
+
+.shelter-card {
+    background-color: #fdf6e3;
+    width: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.shelter-card:hover {
+    transform: translateY(-10px);
+}
+
+.shelter-img-wrapper {
+    width: 100%;
+    height: 300px;
+}
+
+.shelter-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shelter-info {
+    padding: 30px 20px;
+}
+
+.shelter-info h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.shelter-info p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.btn-book {
+    background-color: #f29b59; 
+    color: white;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn-book:hover {
+    background-color: #d48f4d;
+    transform: scale(1.05);
+}
+
+.beoneofus-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f8f9fa; 
+}
+
+.beoneofus-section h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.beoneofus-subtitle {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.beoneofus-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.action-card {
+    background: white;
+    width: 320px;
+    padding: 40px 25px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #ffe8d6; 
+    transition: transform 0.3s ease;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+}
+
+.action-icon {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.action-card h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.action-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+    min-height: 60px;
+}
+
+.btn-action {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 2px solid #f29b59;
+    border-radius: 25px;
+    color: #f29b59;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #f29b59;
+    color: white;
+}
+
+.join-banner {
+    background-color: #f4f6d8; 
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 40px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.join-banner:hover {
+    transform: translateY(-5px);
+}
+
+.join-banner h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.join-banner p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.main-footer {
+    background-color: #000000;
+    color: white;
+    padding: 60px 50px;
+    font-family: 'Alice', serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-brand {
+    flex: 1;
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+    color: #f29b59
+}
+
+.footer-mailing {
+    flex: 2;
+}
+
+.footer-mailing h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.footer-mailing p {
+    color: #ffffff; 
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.footer-input {
+    width: 100%;
+    max-width: 450px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.footer-links {
+    flex: 1;
+}
+
+.footer-links ul {
+    list-style: none;
+    text-align: left;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f29b59;
+}
+
+/* ======================================================
+   RESPONSIVE MEDIA QUERIES
+====================================================== */
+
+html {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Small Laptops / Large Tablets (<=1200px) ---------- */
+@media (max-width: 1200px) {
+    .container {
+        gap: 50px;
+    }
+
+    .redgirl {
+        width: 380px;
+    }
+
+    .shelter-card {
+        width: 420px;
+    }
+}
+
+/* ---------- Medium Tablets & Small Laptops (<=992px) ---------- */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 8px 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
+    .intro-section {
+        padding: 60px 6%;
+    }
+
+    .container {
+        gap: 35px;
+    }
+
+    .redgirl {
+        width: 320px;
+    }
+
+    .redgirl-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .rescue-section h2,
+    .shelter-section h2,
+    .beoneofus-section h2 {
+        font-size: 2.6rem;
+    }
+
+    .shelter-card {
+        width: 45%;
+        min-width: 320px;
+    }
+
+    .action-card {
+        width: 280px;
+    }
+}
+
+/* ---------- Mobile Devices / Androids & iPhones (<=768px) ---------- */
+@media (max-width: 768px) {
+    /* REMOVE LOGO WHEN HAMBURGER MENU APPEARS */
+    .logo {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+        background-color: #222;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .dropdown-content li a {
+        color: #fff !important;
+    }
+
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .btn-donate-main {
+        padding: 12px 30px;
+        font-size: 1rem;
+        margin-top: 30px;
+    }
+
+    .intro-section {
+        padding: 50px 6%;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .redgirl {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .redgirl-content {
+        text-align: center;
+    }
+
+    .redgirl-content p {
+        text-align: left;
+    }
+
+    .quote-bubble {
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 85%;
+    }
+
+    .rescue-section h2,
+    .shelter-section h2,
+    .beoneofus-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .rescue-subtitle,
+    .shelter-subtitle,
+    .beoneofus-subtitle {
+        font-size: 1rem;
+    }
+
+    .rescue-card {
+        min-width: 200px;
+    }
+
+    .rescue-card img {
+        height: 260px;
+    }
+
+    .carousel-wrapper {
+        width: 80%;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 1.8rem;
+    }
+
+    .shelter-container {
+        gap: 25px;
+    }
+
+    .shelter-card {
+        width: 100%;
+        max-width: 480px;
+        min-width: 0;
+    }
+
+    .beoneofus-container {
+        gap: 20px;
+    }
+
+    .action-card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .join-banner {
+        padding: 30px 20px;
+    }
+
+    .join-banner h3 {
+        font-size: 2rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-mailing p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-logo {
+        font-size: 2rem;
+    }
+
+    .footer-mailing h3 {
+        font-size: 1.6rem;
+    }
+}
+
+/* ---------- Small Phones / Small iPhones & Androids (<=480px) ---------- */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-donate-main {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+    }
+
+    .redgirl-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .redgirl-content p {
+        font-size: 1rem;
+    }
+
+    .quote-bubble {
+        padding: 14px 20px;
+    }
+
+    .quote-bubble p {
+        font-size: 0.95rem;
+    }
+
+    .rescue-section h2,
+    .shelter-section h2,
+    .beoneofus-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-wrapper {
+        width: 70%;
+    }
+
+    .rescue-card {
+        min-width: 160px;
+    }
+
+    .rescue-card img {
+        height: 200px;
+    }
+
+    .rescue-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .shelter-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .action-card h3 {
+        font-size: 1.7rem;
+    }
+
+    .footer-container {
+        gap: 30px;
+    }
+
+    .footer-logo {
+        font-size: 1.7rem;
+    }
+}

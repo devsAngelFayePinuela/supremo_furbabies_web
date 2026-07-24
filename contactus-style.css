@@ -1,0 +1,481 @@
+/* BASE STYLES */
+body {
+    opacity: 0;
+    animation: fadeInPage 0.8s ease forwards;
+    overflow-x: hidden;
+}
+
+@keyframes fadeInPage {
+    to {
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alice', serif;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: black;
+    transition: 0.3s ease;
+}
+
+.logo img { 
+    height: clamp(45px, 5vw, 60px); 
+}
+
+/* HAMBURGER MENU ICON (MOBILE) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: clamp(15px, 2vw, 25px);
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    line-height: 1;
+    display: inline-block;
+    font-size: clamp(0.9rem, 1vw, 1.05rem);
+}
+
+.nav-links li a.active {
+    color: #e6a765;
+    text-decoration: underline;
+    text-decoration-color: #e6a765;
+    text-underline-offset: 5px;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    z-index: 1002;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    color: black !important;
+    padding: 10px 20px;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+    color: #e6a765 !important;
+}
+
+/* BUTTONS */
+.btn-donate-nav { 
+    background-color: #e6a765; 
+    padding: 10px 25px; 
+    border-radius: 8px; 
+    color: white; 
+    font-weight: bold; 
+    transition: 0.3s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-donate-nav:hover {
+    background-color: #d48f4d; 
+    color: #ffffff;
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    padding: clamp(100px, 12vw, 140px) 5% 60px 5%;
+    background: #f9f9f9;
+    min-height: calc(100vh - 200px);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: clamp(20px, 4vw, 50px);
+    width: 100%;
+}
+
+.contact-details {
+    flex: 1;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    margin-bottom: clamp(35px, 5vw, 65px);
+}
+
+.contact-item img {
+    width: clamp(50px, 5vw, 68px);
+    height: clamp(50px, 5vw, 68px);
+    margin-bottom: 12px;
+}
+
+.contact-item a,
+.contact-item p {
+    font-size: clamp(14px, 1.2vw, 16px);
+    color: #333;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.contact-form {
+    flex: 1.2;
+    background: #fff;
+    padding: clamp(20px, 4vw, 35px);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+    font-size: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-send {
+    display: inline-block;
+    background: #f3a05b; 
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.btn-send:hover {
+    background: #e68d46;
+}
+
+/* PRIVACY MODAL OVERLAY */
+.privacy-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.privacy-section {
+    background: #ffffff;
+    color: #333333;
+    padding: clamp(20px, 4vw, 30px);
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.privacy-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+}
+
+.privacy-close-btn:hover {
+    color: #000;
+}
+
+.privacy-accept-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 24px;
+    background-color: #e6a765;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.privacy-accept-btn:hover {
+    background-color: #d48f4d;
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: #000000;
+    color: white;
+    padding: 60px 5%;
+    font-family: 'Alice', serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.footer-mailing {
+    flex: 2;
+    min-width: 280px;
+}
+
+.footer-mailing h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.footer-mailing p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.footer-input {
+    width: 100%;
+    max-width: 450px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-links ul {
+    list-style: none;
+    text-align: left;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f29b59;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* Tablet View (Max 900px) */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-details {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .contact-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile Devices (Max 768px) */
+@media (max-width: 768px) {
+    /* REMOVE LOGO ON MOBILE WHEN HAMBURGER APPEARS */
+    .logo {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+        background-color: #222;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .dropdown-content li a {
+        color: #fff !important;
+    }
+
+    .contact-details {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-mailing p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
